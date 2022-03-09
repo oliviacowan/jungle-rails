@@ -4,11 +4,11 @@
     <h1>My Cart</h1>
   </header>
   
-  <% !enhanced_cart %>
+  <% if enhanced_cart.length < 1 %>
   <div class="alert alert-warning" role="alert">Sorry, your cart is empty<div>
   
   
-  <% if enhanced_cart.length > 0 %>
+  <% elsif %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
