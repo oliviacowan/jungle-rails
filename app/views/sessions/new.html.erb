@@ -2,7 +2,9 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-1">
     <h1>Login</h1>
+     <% if params[:user_errors] %>
     <div class="alert alert-danger"><%= params[:user_errors] %></div>
+    <% end %>
       <%= form_tag '/login' do %>
       <div class="form-group">
         <div>Email</div>
