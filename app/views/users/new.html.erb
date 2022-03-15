@@ -2,6 +2,9 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-1">
     <h1>Sign up</h1>
+    <% if params[:user_errors] %>
+      <div class="alert alert-danger"><%= params[:user_errors].first %></div>
+      <% end %>
       <%= form_for :user, url: '/users' do |form| %>
       <div class="form-group">
         <div class="form-group">
