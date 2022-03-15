@@ -16,7 +16,7 @@ RSpec.feature "visitor adds a product to cart", type: :feature, js: true do
     end
   end
 
-  scenario "They see a 1 besaide the cart" do
+  scenario "They see a 1 beside the cart" do
     
     @category.products.create!(
       name:  Faker::Hipster.sentence(3),
@@ -31,7 +31,7 @@ RSpec.feature "visitor adds a product to cart", type: :feature, js: true do
     click_on("Add", match: :first)
 
     expect(page).to have_text 'My Cart (1)'
-     
+
     # DEBUG / VERIFY
     save_screenshot
   end
