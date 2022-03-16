@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
     if order.valid?
       # Tell the OrderMailer to send an email if order is valid
-      OrderMailer.welcome_email(order).deliver
+      OrderMailer.order_confirmation(order).deliver
       
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'

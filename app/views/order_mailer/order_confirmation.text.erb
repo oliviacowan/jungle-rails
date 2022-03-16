@@ -1,14 +1,11 @@
 Thank you for your purchase!!
 ===============================================
 
-
-Your order ID is: <%= @order.id %>
 Order details:
     
 <% @order.line_items.each do |item| %>
 <%= item.product.name %>
 
-<%= item.product.description %>
 Quantity: <%= item.quantity %>
           
 <% end %>
