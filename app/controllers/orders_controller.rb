@@ -9,6 +9,9 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
+      # Tell the OrderMailer to send an email if order is valid
+      OrderMailer.welcome_email(order).deliver
+      
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
@@ -22,7 +25,7 @@ class OrdersController < ApplicationController
   private
 
   def empty_cart!
-    # empty hash means no products in cart :)
+    # empty hash means no products in cart
     update_cart({})
   end
 

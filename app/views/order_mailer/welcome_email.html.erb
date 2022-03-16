@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Your order ID is: <%= @order.id %></h1>
+    
+    <h3>
+      Order details:
+    </h3>
+    <tbody>
+        <% @order.line_items.each do |item| %>
+          <%= render 'item', product: item.product, quantity: item[:quantity].to_i %>
+        <% end %>
+      </tbody>
+
+      <h5>Order total: <%=  humanized_money_with_symbol @order.total_cents / 100.0 %></h5>
+      <h4>Please allow 3-5 business days for shipping</h4>
+   
+    <p>Thanks for the order and have a great day!</p>
+    <p>~ The team at Jungle </p>
+  </body>
+</html>
