@@ -13,9 +13,18 @@ A mini e-commerce application built with Rails 4.2 for purposes of learning Rail
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
-## Stripe Testing
+### Email Confirmation
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+* To view a preview of the confirmation email browse to http://0.0.0.0:3000/rails/mailers/order_mailer/order_confirmation
+
+### Stripe Testing
+
+* Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+
+
+## Final Product
+
+!["Add to cart and place order"](https://raw.githubusercontent.com/oliviacowan/jungle-rails/063f6dd92b317409390d836caf3e8f8d0ea31cd2/gif/2.gif)
 
 
 ## Dependencies
@@ -28,13 +37,3 @@ Testing:
 * capybara
 * poltergeist
 * database_cleaner
-
-
-## Email Confirmation
-
-* To view a preview of the confirmation email browse to http://0.0.0.0:3000/rails/mailers/order_mailer/order_confirmation
-
-
-
-
-!["Add to cart and place order"](https://raw.githubusercontent.com/oliviacowan/jungle-rails/063f6dd92b317409390d836caf3e8f8d0ea31cd2/gif/2.gif)
