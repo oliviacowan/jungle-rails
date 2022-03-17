@@ -31,3 +31,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+
+
+!["Add to cart and place order"](https://raw.githubusercontent.com/oliviacowan/jungle-rails/063f6dd92b317409390d836caf3e8f8d0ea31cd2/gif/2.gif)
